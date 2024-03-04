@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <title>HOME PAGE</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #141E46;
+      position: relative;
+    }
+    .video-container {
+      position: static;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter 0.3s ease;
+    }
+    .Projectstext {
+  margin: auto;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+
+.Ourteam {
+  top:50px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+
+.Ourmentors {
+  top:50px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+.AboutUs{
+  top:50px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+
+.animate {
+  animation: slideUp 1s ease-in-out forwards;
+}
+
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(50%);
+    opacity: 1;
+  }
+}
+
+   .blur-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(6, 5, 8, 0.5); /* Adjust the opacity as needed */
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 0%; /* Adjust the width of the navbar container */
+  transition: width 0.3s ease; /* Transition for expanding the container */
+}
+.blur-container:hover {
+  width: 50%; /* Expand the container on hover */
+}
+    .blur-container:hover .navbar-logo {
+  transform: translateX(50%); /* Move the logo to its original position on hover */
+}
+
+
+    .navbar-logo {
+  width: 40px; /* Adjust logo size as needed */
+  height: 40px;
+  transition: transform 0.3s ease; /* Transition for moving the logo */
+}
+
+    .navbar-links {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: none;
+    }
+
+    .navbar-links li {
+      margin-right: 50px; /* Adjust the space between navbar links */
+    }
+
+    .navbar-links li:last-child {
+      margin-right: 100px;
+    }
+
+    .navbar-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px; /* Adjust font size as needed */
+    }
+
+    .navbar-links li a:hover {
+      color: black;
+      background-color: #b3e0dc;
+      border-radius: 20px;
+      padding: 7px;
+      text-align: center;
+    }
+     .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 50px;
+      color: white;
+    }
+    .container {
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  height: 450px; /* Adjust as needed */
+  background-color: rgba(255, 245, 224, 0.8); /* White color with transparency */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  overflow: hidden; /* Ensures the photo doesn't overflow */
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+ .container:hover {
+    background-color: rgba(255, 105, 105, 0.4);
+}
+
+    .animate-container {
+      animation: slideIn 1s ease forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .name {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+  }
+  .container:nth-child(1) {
+    margin-right: 20px; /* Adjust spacing between containers */
+  }
+  .container-wrapper {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="video-container">
+    <video autoplay="false" muted id="bg-video" preload="none">
+      <source src="{% static '/bg.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+  <div class="blur-container" onmouseover="showNavbar()" onmouseleave="hideNavbar()">
+  <img src="{% static '/logo.png' %}" alt="Brand Logo" class="navbar-logo">
+  <span class="website-name">Your Website Name</span>
+  <ul class="navbar-links" id="navbar-links">
+    <li><a href="{% url 'projects' %}">Projects</a></li>
+    <li><a href="{% url 'team' %}">Our Team</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'club' %}">Club</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+</div>
+  <div class='Projectstext'>
+    <h1>Our Projects</h1>
+  </div>
+  <div class="container-wrapper">
+    <div class="container" onclick="handleRudraClick()">
+      <img src="{% static '/rudra.png' %}" alt="Rudra">
+      <div class="name"><h5>Project-Rudra</h5><h6>Film</h6></div>
+    </div>
+    <div class="container" onclick="handleOtherProjectsClick()">
+      <img src="{% static '/photo2.png' %}" alt="Other Projects">
+      <div class="name"><h5>Other Projects</h5><h6>College Event Videos</h6></div>
+    </div>
+  </div>
+  <div class='Ourteam'>
+    <h1>Our Teams</h1>
+  </div>
+  <div class="container-wrapper">
+    <div class="container" onclick="handleDhruvKohliClick()">
+      <img src="{% static '/dhruv.png' %}" alt="Dhruv Kohli">
+      <div class="name"><h5>Dhruv Kohli</h5><h6>Founder-The Designing Sphere</h6></div>
+    </div>
+    <div class="container" onclick="handleGautamGuptaClick()">
+      <img src="{% static '/photo2.png' %}" alt="Gautam Gupta">
+      <div class="name"><h5>Gautam Gupta</h5><h6>Co-founder-The Designing Sphere</h6></div>
+    </div>
+  </div>
+   <div class='Ourmentors'>
+    <h1>Our Mentors</h1>
+  </div>
+  <div class="container-wrapper">
+    <div class="container" onclick="handleSaiVijayClick()">
+      <img src="{% static '/photo2.png' %}" alt="Sai vijay">
+      <div class="name"><h5>P.Sai Vijay</h5><h6>Director Of Sac</h6></div>
+    </div>
+    <div class="container" onclick="handleSubhashClick()">
+      <img src="{% static '/photo2.png' %}" alt="Subhash">
+      <div class="name"><h5>Subhash</h5><h6>HOD Of Fine Arts</h6></div>
+    </div>
+  </div>
+   <div class='AboutUs'>
+    <h1>About Us</h1>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var video = document.getElementById('bg-video');
+      var scrollPosition = window.scrollY;
+      var videoPosition = video.getBoundingClientRect().top;
+
+      if (videoPosition < window.innerHeight && videoPosition + video.clientHeight > 0) {
+        var blurAmount = Math.min(5, Math.max(0, (scrollPosition - videoPosition) / 100));
+        video.style.filter = 'blur(' + blurAmount + 'px)';
+      } else {
+        video.style.filter = 'none';
+      }
+    });
+     window.addEventListener('scroll', function () {
+      var Ourmentors = document.querySelector('.Ourmentors');
+      var scrollPosition = window.scrollY;
+      var elementPosition = Ourmentors.getBoundingClientRect().top;
+
+      if (elementPosition < window.innerHeight && elementPosition + Ourmentors.clientHeight > 0) {
+        Ourmentors.classList.add('animate');
+      } else {
+        Ourmentors.classList.remove('animate');
+      }
+    });
+     window.addEventListener('scroll', function () {
+      var AboutUs = document.querySelector('.AboutUs');
+      var scrollPosition = window.scrollY;
+      var elementPosition = AboutUs.getBoundingClientRect().top;
+
+      if (elementPosition < window.innerHeight && elementPosition + AboutUs.clientHeight > 0) {
+        AboutUs.classList.add('animate');
+      } else {
+        AboutUs.classList.remove('animate');
+      }
+    });
+    window.addEventListener('scroll', function () {
+      var Ourteam = document.querySelector('.Ourteam');
+      var scrollPosition = window.scrollY;
+      var elementPosition = Ourteam.getBoundingClientRect().top;
+
+      if (elementPosition < window.innerHeight && elementPosition + Ourteam.clientHeight > 0) {
+        Ourteam.classList.add('animate');
+      } else {
+        Ourteam.classList.remove('animate');
+      }
+    });
+
+     window.addEventListener('scroll', function () {
+      var projectText = document.querySelector('.Projectstext');
+      var scrollPosition = window.scrollY;
+      var elementPosition = projectText.getBoundingClientRect().top;
+
+      if (elementPosition < window.innerHeight && elementPosition + projectText.clientHeight > 0) {
+        projectText.classList.add('animate');
+      } else {
+        projectText.classList.remove('animate');
+      }
+    });
+   window.addEventListener('scroll', function () {
+  var containers = document.querySelectorAll('.container');
+  var scrollPosition = window.scrollX;
+
+  containers.forEach(function (container) {
+    var elementPosition = container.getBoundingClientRect().top;
+
+    if (elementPosition < window.innerHeight && elementPosition + container.clientHeight > 0) {
+      container.classList.add('animate-container');
+    } else {
+      container.classList.remove('animate-container');
+    }
+  });
+});
+ function handleRudraClick() {
+    window.location.href = 'http://127.0.0.1:8000/projects';
+  }
+
+  function handleOtherProjectsClick() {
+    window.location.href = 'http://127.0.0.1:8000/projects';
+  }
+
+  function handleDhruvKohliClick() {
+    window.location.href = 'http://127.0.0.1:8000/team';
+  }
+
+  function handleGautamGuptaClick() {
+    window.location.href = 'http://127.0.0.1:8000/team';
+  }
+
+  function handleSaiVijayClick() {
+    window.location.href = 'http://127.0.0.1:8000/team';
+  }
+
+  function handleSubhashClick() {
+    window.location.href = 'http://127.0.0.1:8000/team';
+  }
+
+  // Add click event listeners to respective containers
+  document.getElementById('container-rudra').addEventListener('click', handleRudraClick);
+  document.getElementById('container-other-projects').addEventListener('click', handleOtherProjectsClick);
+  document.getElementById('container-dhruv-kohli').addEventListener('click', handleDhruvKohliClick);
+  document.getElementById('container-gautam-gupta').addEventListener('click', handleGautamGuptaClick);
+  document.getElementById('container-sai-vijay').addEventListener('click', handleSaiVijayClick);
+  document.getElementById('container-subhash').addEventListener('click', handleSubhashClick);
+    // document.getElementById('bg-video').addEventListener('ended', function() {
+    //   this.pause();
+    // });
+  </script>
+
+</body>
+
+</html>

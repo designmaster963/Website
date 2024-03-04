@@ -1,0 +1,50 @@
+<!-- my_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Model Viewer</title>
+    <style>
+        body {
+      margin: 0;
+      height: 100%;
+      background-color: #060508ff;
+    }
+        header{
+        margin-top: 3em;
+        text-align: center;
+        color: white;
+    }
+        header h1{
+        font-size: 2em;
+        font-weight: 900;
+    }
+        #container3D canvas {
+        width: 100vw !important;
+        height: 100vh !important;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    </style>
+</head>
+<body>
+      <header>
+          <h1>A simple three.js app</h1>
+      </header>
+       <main>
+           <div id="container3D"></div>
+       </main>
+       <script src="https://cdn.skypack.dev/three@0.129.0"></script>
+      <script src="https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/Orbit Controls.js"></script>
+      <script src="https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js"></script>
+      <script>
+          const scene = new THREE.Scene();
+          const camera = new THREE.Perspective Camera (75, window.innerWidth / window.innerHeight, 0.1, 1000);
+          let object;
+          let controls;
+          let objToRender = 'eye';
+
+      </script>
+</body>
+</html>

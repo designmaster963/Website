@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "clubregistration-c832d",
+  "private_key_id": "7982a2137f3936d7bd2221f92297279a33f50e03",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC87AFZob1my93p\nAtufjWjoYh/QTT2BvAPE/bVh1+pHKcYRj0U8UCWGJnryJl/bzr/9yjd0MmvjvIHb\n0eDd1VUWu9vogeGEDYZJ3z4RPD4H61u6HKQr3mXV3j/C3cCxX2MHl9wvK2/i5uES\nLARGHuFsuBSqnNzSWxC1YgmX+Z98UGkYsDWdgRkV3BmmrqSdxavWCV2QIydEPHrQ\n5BHo/1TOasz53V27xSlJLDJ9QcVVMAKNFu9tSwqJ9nlokg+6dBeU89vZYi1mZAa4\nmJTGvW1ZWCN6OPH1XNzx2wbR6KaMvRfo4la9tpGifF9GVeYCCHjMhfOW1ALCM/nN\ncKUEgC2BAgMBAAECggEARW2D94EZflAYfru2o3WP4qrA30erfWRvjDLiuBDlv35K\nFITu4EHh8GFu2FOi8cASzX1FkNXA0YIixPpl5ZAzQ3YJVHJ6wpFH0xkQEbxuXXGw\nlX5WFOsXyJdzHjVpTaXs2ksEN2+CoEPR3eBAN9a8aDxkF+kqu8GMq+PZ+7hYVJID\nZX/q0SV8MA2gAQ6OSNcviMoqPjqbZV2x/8WmVRV6fG0/bkX3NF6UCGdS7dXYecHV\nO7DHjLZlzFIhnUhQ07jHLssW0R66kFDaXjFalNlrtm5sxkWeYnwNS9jtJM9A5kh7\naiP8zwf/V88eOyQCK2gi7+jY1LsWcwf9NBRz7MTZ8wKBgQD7F6h+seuNz+lhzpZe\nwZsDwNPufzC5Wk1oXhOt8dJczCN6En7TvIMDAqYkfifJyRfdpsNF38Y5ODvTetqQ\nRks/vOAD+qlVTEWyRANb8/R/1aVPy8Qjl99oxqf4veP6PQD6UfClLC0ier45J3S/\nxbA2vcd6NncZZpf4tOsenEHjhwKBgQDAnUbT3koA9xIMFu3PjWYg5oBwUlLgtbzu\nF21yc2FgIkv1r2LcLcjvRlAFz26GOHcotyIBWFoWhiBvOeGhipSwPnoMLJ4zMxDy\nG5vERCljM/eV0+uQooBHNqOy0CFgCR7m05MJEtPktMLnspjK9T9wvv1kMQbGi7qH\narMtdZc4twKBgQD56ZE2EMYfjrl+NM1roI02Th1iOsv3IA79eu1hatfyruf8nx4G\nhpFrVJ6iocHeUD1lyo5/JHu6BeNd2OBjSuOom8fnjfwuPsz74j/prMVE2xM/edNN\njeK5+UfEBtQ7A67OdvHqpC6EK+DbKA9GtG9v/LHnTQB7kqZdz0xZWjMmTwKBgGP5\n/saADgd8NvjheeSOb2FKY4ZppK0QiBVJQbzzWKrOgoDu3TCN70sLQwQRDDxM2MTg\ncZ0jH/eq/PDeqVfxF4Z3l1/0VNUcf4I7hFmWS6k7UxqI2i/DuTO9j7CDyZ8QfOKx\nFRPTmvqOPNCI6jgGnjxGVj4IGI07/8DESGajL6/3AoGBALa1BE2SSSSZzT799KtF\n7Z1CM5Ti1FTI5XkCdF9r4itPJDvERXsswnxuNNW6OND5EHt8/VwUmeSCkgb3lhlW\nVgBwz+CLPBvSMrMCrwmWFQ6nrR47AO+WHZbA8xksQrphZRXzenUl5PtyxHXQs4kp\n03CwxYCilcillcttO9KWSERj\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-z199b@clubregistration-c832d.iam.gserviceaccount.com",
+  "client_id": "100595713894319878826",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-z199b%40clubregistration-c832d.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
